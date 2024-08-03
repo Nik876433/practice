@@ -1,0 +1,12 @@
+ <li class="list-style-type:none">
+     <a class="footer-links cursor-pointer">Private Policy</a>
+ </li>
+ <li>
+     <a class="footer-links cursor-pointer">Refund/Return Policy</a>
+ </li>
+ <li>
+     <a class="footer-links cursor-pointer">Warranty Policy</a>
+ </li>
+ <li>
+     <a class="footer-links cursor-pointer">Terms & conditions</a>
+ </li>

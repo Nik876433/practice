@@ -74,7 +74,38 @@
         
     </div> 
 
-    <script src="index.js"></script>
+
+    <button id="activeBtn">Active</button>
+    <button id="favouritesBtn">Favourites</button>
+
+    <div id="activeContent" class="content">
+        <p>heeloo</p>
+    </div>
+    <div id="favouritesContent" class="content">
+        <p>hiii</p>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $("#favouritesContent").hide();
+            $("#activeBtn").click(function(){
+                $("#activeContent").show();
+                $("#favouritesContent").hide();
+                $("#activeBtn").addClass("active-btn");
+                $("#favouritesBtn").removeClass("active-btn");
+            });
+
+            $("#favouritesBtn").click(function(){
+                $("#activeContent").hide();
+                $("#favouritesContent").show();
+                $("#favouritesBtn").addClass("active-btn");
+                $("#activeBtn").removeClass("active-btn");
+            });
+        });
+    </script>
+
+    <!-- <script src="index.js"></script> -->
 </body>
 
 </html>

@@ -1,98 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DataTables Example</title>
-
-
-    <!-- DataTables CSS -->
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-</head>
-
-<body>
-    <!-- Your table here -->
-    <table id="example" class="display nowrap" style="width:100%">
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>First name</th>
-                <th>Last name</th>
-                <th>ZIP / Post code</th>
-                <th>Country</th>
-            </tr>
-        </thead>
-    </table>
-
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- DataTables CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.4/css/jquery.dataTables.css">
     <!-- DataTables JS -->
-    <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.js"></script>
+</head>
+<body>
+    <table id="example" class="display">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Office</th>
+                <th>Age</th>
+                <th>Start date</th>
+                <th>Salary</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Tiger Nixon</td>
+                <td>System Architect</td>
+                <td>Edinburgh</td>
+                <td>61</td>
+                <td>2011/04/25</td>
+                <td>$320,800</td>
+            </tr>
+            <!-- More rows here -->
+            <tr>
+                <td>Akash</td>
+                <td>Web Developer</td>
+                <td>Edinburgh</td>
+                <td>23</td>
+                <td>2011/04/25</td>
+                <td>$40,00,00</td>
+            </tr>
+        </tbody>
+    </table>
     <script>
-        // $(document).ready(function () {
-        //     $('#example').DataTable();
-        // });
+        $(document).ready(function() {
+            $('#example').DataTable({
+                "paging": true,
+                "searching": true,
+                "pageLength": 5,
+                // searching: false, 
+                // ordering:  true 
+            });
 
-        // $('#example').DataTable({
-        // paging: true,
-        // ordering: true,
-        // info: true
-        // });
+            var table = $('#example').DataTable();
 
-        // $('#example').DataTable({
-        //     order: [[3, 'desc']] // Sort by the 4th column (index starts at 0) in descending order
-        // });
+            // Example: Log the data of the first row to the console
+            var data = table.row(0).data();
+            console.log(data);
 
-        // $('#example').DataTable({
-        //     language: {
-        //         search: "Filter records:",
-        //         lengthMenu: "Show _MENU_ entries"
-        //     }
-        // });
-
-
-        // var table = $('#example').DataTable();
-
-        //         $('#example').DataTable( {
-        //     paging: false
-        // } );
-        // table.search( 'Tiger' ).draw(); 
-        // tabl ke suarch Filter ke input ke value me default Search hota hai 
-
-
-        // table.columns().flatten().each(function (colIdx) {
-        //     // Create the select list and search operation
-        //     var select = $('<select />')
-        //         .appendTo(
-        //             table.column(colIdx).footer()
-        //         )
-        //         .on('change', function () {
-        //             table
-        //                 .column(colIdx)
-        //                 .search($(this).val())
-        //                 .draw();
-        //         });
-
-        //     // Get the search data for the first column and add to the select list
-        //     table
-        //         .column(colIdx)
-        //         .cache('search')
-        //         .sort()
-        //         .unique()
-        //         .each(function (d) {
-        //             select.append($('<option value="' + d + '">' + d + '</option>'));
-        //         });
-        // });
-
-
-
-       
+            // Example: Add a new row
+            table.row.add([
+                "Chintu",
+                "Project Manager",
+                "",
+                "New Age",
+                "New Start date",
+                "New Salary"
+            ]).draw();
+        });
     </script>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        crossorigin="anonymous"></script>
 </body>
-
 </html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example Code </title>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+
+    <style>
+        .input-wapper {
+            position: relative;
+        }
+
+        .child {
+            position: absolute;
+            z-index: 999;
+
+        }
+
+
+
+        .storeData[type="month"]::-webkit-calendar-picker-indicator {
+            color: rgba(0, 0, 0, 0);
+            opacity: 0;
+            display: block;
+            background: url('https://tse2.mm.bing.net/th?id=OIP.k2MHxL38IIrKOfLPdWDgywHaHa&pid=Api&P=0&h=180') no-repeat;
+            width: 50px;
+            height: 25px;
+            border-width: thin;
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="month-picker">
+
+
+        <!-- class="input-wapper" -->
+        <!-- <div>
+            <input style="background: var(--Surface-Tertiary-50, #FAFAFA); font-size:.8rem"
+                class="input-wapper form-control monthSelector" type="month" />
+
+            <div class="child">
+                <p class="nav-icon cursor-pointer" alt="next" id="prev-month"> N </p>
+                <span class="month-display " id="month-display"></span>
+                <p class="nav-icon cursor-pointer" alt="past" id="next-month">P</p>
+            </div>
+        </div> -->
+
+
+        <!-- <div class="super-container">
+            <div class="container">
+                <input type="date">
+            </div>
+            <div> -->
+
+    </div>
+
+    <!-- <div class="input-wapper">
+        <input class="input-field date storeData child" type="month" placeholder="Date and Time" style="width: 4%;" />
+    </div> -->
+
+
+    <h1>one</h1>
+    <div class="row mr-3 border attendance_box d-flex justify-content-center align-items-center" id="attendance-wapper"
+        style="width:200px;">
+        <div class="position-absolute d-flex" style="z-index: 10; border: none;">
+            <img class="nav-icon cursor-pointer prev-month" src="~/iBricks/img/icons/arrow-left.svg" />
+            <input class="input-field lg-regular-700 text-center storeData month-display update-date monthSelector"
+                type="month" name="daterange" placeholder="Date and Time" />
+
+            <img class="nav-icon cursor-pointer next-month" src="~/iBricks/img/icons/arrow-right.svg" />
+        </div>
+    </div>
+
+    <h2>i am 2</h2>
+    <!-- <div class="row mr-3 border attendance_box d-flex justify-content-center align-items-center" style="width:200px;">
+        <div class="position-absolute d-flex" style="z-index: 10; border: none;">
+            <img class="nav-icon cursor-pointer" style="width: 20px; height: 20px;"
+            id="prev-month" src="https://cdn-icons-png.flaticon.com/128/507/507257.png" />
+            <div class=" border attendance_box  pr-0 mr-3" style="background: var(--Surface-Tertiary-50, #FAFAFA); max-width:266px; width:100%;" id="month-year-picker">
+                <div class="lg-regular-700 text-center dateRange d-flex justify-content-around"
+                 name="daterange" style="padding:8px 0px;font-size:14px;">
+                    Select your date
+                </div>
+            </div>
+            <img class="nav-icon cursor-pointer"  style="width: 20px; height: 20px;"
+               id="next-month" src="https://cdn-icons-png.flaticon.com/128/271/271226.png" />
+        </div>
+    </div> -->
+
+       
+    <div class="position-absolute d-flex" style="z-index: 10; border: none;">
+        <img class="nav-icon cursor-pointer" style="width: 20px; height: 20px;" id="prev-month" src="https://cdn-icons-png.flaticon.com/128/507/507257.png" />
+        <div class="border attendance_box pr-0 mr-3" style="background: var(--Surface-Tertiary-50, #FAFAFA); max-width:266px; width:100%;" id="month-year-picker">
+            <div class="lg-regular-700 text-center dateRange d-flex justify-content-around" name="daterange" style="padding:8px 0px;font-size:14px;">
+                Select your date
+            </div>
+        </div>
+        <img class="nav-icon cursor-pointer" style="width: 20px; height: 20px;" id="next-month" src="https://cdn-icons-png.flaticon.com/128/271/271226.png" />
+    </div>
+
+   
+    <h2>hii i am 2 </h2>
+    
+    <div class="position-absolute d-flex" style="z-index: 10; border: none;">
+        <img class="nav-icon cursor-pointer" style="width: 20px; height: 20px;" id="prev-month" src="https://cdn-icons-png.flaticon.com/128/507/507257.png" />
+        <div class="border attendance_box pr-0 mr-3" style="background: var(--Surface-Tertiary-50, #FAFAFA); max-width:266px; width:100%;" id="month-year-picker">
+            <div class="lg-regular-700 text-center dateRange d-flex justify-content-around" name="daterange" style="padding:8px 0px;font-size:14px;">
+                Select your date
+            </div>
+        </div>
+        <img class="nav-icon cursor-pointer" style="width: 20px; height: 20px;" id="next-month" src="https://cdn-icons-png.flaticon.com/128/271/271226.png" />
+    </div>
+
+
+</body>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+
+<script src="./example.js"></script>
+
+</html>
